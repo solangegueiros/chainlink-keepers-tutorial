@@ -41,7 +41,7 @@ The smart contract Counter must have these functions to be keeper-compatible:
 * checkUpkeep - Checks if the contract requires work to be done.
 * performUpkeep - Performs the work on the contract, if instructed by checkUpkeep.
 
-There are some parameters that will not be used and also not be explained here: checkData and performData
+There are some parameters that will not be used and also not be explained here: checkData and performData.
 
 You can learn more about it in [compatible-contracts/](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/)
 
@@ -123,7 +123,7 @@ The constructor, which is executed only in the moment of publish the smart contr
 
 * lastTimeStamp is the moment the smart contract is created
 
-The function checkUpkeep defines the condition to increase the counter and it will be called by Upkeep
+The function checkUpkeep defines the condition to increase the counter and it will be called by Upkeep.
 
 The function performUpkeep increases the counter and updates the timestamp. It is called by Upkeep, when checkUpkeep returns true.
 
@@ -135,7 +135,7 @@ If you enabled auto-compile, the smart contract is already compiled and a green 
 
 If you haven't enabled it, perform the following steps:
 
-1. Click on the 3rd button at the left side, selecting Solidity compiler
+1. Click on the 3rd button at the left side, selecting Solidity compiler.
 
 2. Click on the button Compile Counter.sol.
 
@@ -153,11 +153,11 @@ If you haven't enabled it, perform the following steps:
 
 In Remix, on the left side, locate the fourth button: Deploy and run transactions.
 
-In the dropdown contract, select Counter
+In the dropdown contract, select Counter.
 
-In the right side of the button deploy, fill the parameter updateInterval
+In the right side of the button deploy, fill the parameter updateInterval.
 
-I will use 30, for 30 seconds
+I will use 30, for 30 seconds.
 
 ![Remix - deploy](/images/image_4.png)
 
@@ -183,14 +183,13 @@ In order to use Keepers you need to verify the source code in Etherscan.
 
 Copy the smart contract address from Remix.
 
-Go to [kovan.etherscan.io/](https://kovan.etherscan.io/) and paste the address
+Go to [kovan.etherscan.io/](https://kovan.etherscan.io/) and paste the address.
 
-For example, this is mine:
+For example:
 
 [0x8ffbe4e71ff4aafb1e85c78fa1eb00085277016e](https://kovan.etherscan.io/address/0x8ffbe4e71ff4aafb1e85c78fa1eb00085277016e) 
 
-Go to the tab Contract and click on Verify and Publish
-
+Go to the tab Contract and click on Verify and Publish.
 
 Fill this info:
 
@@ -204,7 +203,7 @@ Fill this info:
 
 ![Etherscan - screen 1](/images/image_6.png)
 
-Click on Continue button
+Click on Continue button.
 
 Copy the source code from Remix and paste it on Etherscan.
 
@@ -227,7 +226,7 @@ Make sure you have some LINK tokens in Kovan.
 
 You need it in order to use in the Keepers App.
 
-You can get it in the faucet
+You can get it in the faucet:
 
 [https://kovan.chain.link/](https://kovan.chain.link/)
 
@@ -254,7 +253,7 @@ Select the Kovan network.
 
 ## Register new upkeep
 
-Click on the Register new upkeep button
+Click on the Register new upkeep button.
 
 ![Keepers - Register new upkeep button](/images/image_11.png)
 
@@ -266,18 +265,13 @@ Your email address will be encrypted.
 
 For the Counter contract, I suggest you fund it with 20 LINK tokens.
 
-Upkeep name: Counter
+- Upkeep name: Counter
+- Upkeep address: the address of your smart contract
+- Admin address: it is filled automatically with the connected wallet
+- Gas limit: 200000
+- Starting balance (LINK): 20
 
-Upkeep address: the address of your smart contract
-
-Admin address: it is filled automatically with the connected wallet
-
-Gas limit: 200000
-
-Check data (Hexadecimal): 
-Starting balance (LINK): 20
-
-Take a look in mine example:
+Take a look in this example:
 
 ![Keepers - Register new upkeep](/images/image_12.png)
 
@@ -285,7 +279,7 @@ Click on Register Upkeep button
 
 Confirm the transaction in Metamask
 
-Check it out the confirmation, this is an example
+Check it out the confirmation, this is an example:
 
 ![Keepers - Register new upkeep - confirm](/images/image_13.png)
 
@@ -295,11 +289,11 @@ Click on view Upkeep
 
 ![Keepers - Register new upkeep - view](/images/image_14.png)
 
-Wait a minute and you will see the last keeper field be updated
+Wait a minute (maybe less) and you will see the last keeper field be updated!
 
 ![Keepers - Register new upkeep - result](/images/image_15.png)
 
-Check it out the History
+Take a look on the history:
 
 ![Keepers - Register new upkeep - history](/images/image_16.png)
 
@@ -313,7 +307,7 @@ Also check the lastTimeStamp, it will be updated.
 
 # Final considerations
 
-This was a step-by-step tutorial to show how to create a basic example for Keepers.
+This was a step-by-step tutorial to show how to create a basic example for Chainlink Keepers.
 Several concepts were not covered in depth, but you can learn directly by reading the official documentation:
 
 [docs/chainlink-keepers/introduction/](https://docs.chain.link/docs/chainlink-keepers/introduction/)
